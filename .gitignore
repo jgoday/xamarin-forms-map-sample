@@ -1,0 +1,11 @@
+﻿/.vs
+/.vscode
+**/bin
+**/obj
+/packages
+/XMap/bin/Debug/netstandard2.0
+/XMap/obj
+/XMap.WPF/bin/Debug
+/XMap.WPF/obj/Debug
+/XMap.WPF/obj/Release
+/XMap.Gtk/obj/x86

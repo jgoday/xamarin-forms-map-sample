@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XMap.Views.MapView"   
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             xmlns:xmaps="clr-namespace:XMap.Components;assembly=XMap"
+			 Title="Map">
+    <RelativeLayout Padding="0">
+        <xmaps:EventMap
+            x:Name="MyMap"
+            IsShowingUser="true"
+            MapType="Hybrid"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y,Factor=0,Constant=0}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,Factor=.8,Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1,Constant=0}"
+            />
+        <StackLayout Padding="5,10"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,Factor=0.8,Constant=0}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,Factor=.2,Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1,Constant=0}">
+            <ScrollView>
+                <Label FontSize="20" Text="{Binding Path=Text}"/>
+            </ScrollView>
+        </StackLayout>
+    </RelativeLayout>
+</ContentPage>
